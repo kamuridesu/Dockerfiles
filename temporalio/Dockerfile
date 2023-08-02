@@ -6,4 +6,4 @@ RUN curl --output /tmp/temporal.tar.gz "https://temporal.download/cli/archive/la
     && tar -xvf /tmp/temporal.tar.gz \
     && mv temporal /usr/bin/temporal \
     && rm /tmp/temporal.tar.gz
-ENTRYPOINT [ "temporal", "server", "start-dev" ]
+ENTRYPOINT [ "temporal", "server", "start-dev", "--ui-ip", "0.0.0.0", "--ip", "0.0.0.0" ]
